@@ -7,7 +7,7 @@ const { test, registerUser, loginUSer, getProfile, logoutUser } = require('../Co
 router.use(
     cors({
         credentials : true,
-        origin : 'https://storemate.netlify.app/'
+        origin : 'https://storemate.netlify.app'
     })
 ) 
 

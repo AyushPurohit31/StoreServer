@@ -7,7 +7,7 @@ const { getItems, addItems, editItem, deleteItem, addBill, getBills, updateStatu
 router.use(
     cors({
         credentials : true,
-        origin : 'https://storemate.netlify.app/'
+        origin : 'https://storemate.netlify.app'
     })
 ) 
 

@@ -3,7 +3,6 @@ const dotenv = require('dotenv').config();
 const cors = require('cors');
 const { default: mongoose } = require('mongoose');
 const cookieParser = require('cookie-parser');
-const path = require('path');
 
 //database connection
 mongoose.connect(process.env.MONGO_URL).then(()=>{
@@ -13,12 +12,6 @@ mongoose.connect(process.env.MONGO_URL).then(()=>{
 })
 
 const app = express();
-
-app.use(express.static(path.join(__dirname, 'client/dist')));
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client/dist/index.html'));
-  });
 //middleware 
 app.use(express.json());
 app.use(cookieParser());

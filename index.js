@@ -14,10 +14,10 @@ mongoose.connect(process.env.MONGO_URL).then(()=>{
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client/dist')));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client/build/index.html'));
+    res.sendFile(path.join(__dirname, 'client/dist/index.html'));
   });
 //middleware 
 app.use(express.json());

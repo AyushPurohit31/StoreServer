@@ -24,7 +24,7 @@ const registerUser = async(req, res)=>{
         //password is good or not
         if(!password || password.length < 6){
             return res.json({
-                error : "Password is required and should be atleast 6 characters long!"
+                error : "Password should be atleast 6 characters long!"
             })
         };
         //check email
